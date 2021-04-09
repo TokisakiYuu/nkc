@@ -1,0 +1,35 @@
++includeCSS("/publicModules/sponsor.css")
+.panel-header 支持我们
+#sponsor
+  .sponsor-rich-text 让网站运作地更好。
+  .sponsor-wrap-center
+    span.sponsor-button(@click="openForm($event.target)")
+      .fa.fa-heart.sponsor-icon(:class="{'pingpong-animate': open}")
+      | &nbsp;赞助
+  .sponsor-form(:class="{'sponsor-form-close': !open}")
+    .sp-row
+      .sp-col
+        .sp-item(:class="{'sp-item-highlight': selected === 1}" data-key="1" @click="select($event.target)") 1元
+      .sp-col
+        .sp-item(:class="{'sp-item-highlight': selected === 5}" data-key="5" @click="select($event.target)") 5元
+    .sp-row
+      .sp-col
+        .sp-item(:class="{'sp-item-highlight': selected === 20}" data-key="20" @click="select($event.target)") 20元
+      .sp-col
+        .sp-item(:class="{'sp-item-highlight': selected === 50}" data-key="50" @click="select($event.target)") 50元
+    .sp-row
+      .sp-col
+        .sp-item(:class="{'sp-item-highlight': selected === 100}" data-key="100" @click="select($event.target)") 100元
+      .sp-col
+        .sp-item(:class="{'sp-item-highlight': selected === 200}" data-key="200" @click="select($event.target)") 200元
+    .sp-row
+      .sp-col
+        .sp-item(:class="{'sp-item-highlight': selected === 500}" data-key="500" @click="select($event.target)") 500元
+      .sp-col
+        .sp-item.sp-enter-amount(@click="select($event.target)" data-key="0")
+          input#sponsorAmount(@input="inputCustomAmount($event)" type="text" placeholder="自定义")
+    .sp-row 
+      .sponsor-pay
+        button(@click="confirm()") 确定
+
++includeJS("/publicModules/sponsor.js")

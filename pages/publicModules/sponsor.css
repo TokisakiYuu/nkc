@@ -1,0 +1,109 @@
+.sponsor-rich-text {
+  font-size: 1em;
+}
+.sponsor-wrap-center {
+  text-align: center;
+  margin-top: 20px;
+}
+.sponsor-button {
+  font-size: 1.4em;
+  height: 1.4em;
+  line-height: 1.4em;
+  transition: transform .2s, width .5s;
+  cursor: pointer;
+  display: inline-block;
+}
+.sponsor-button:hover {
+  transform: scale(1.2);
+}
+.sponsor-icon {
+  color: red;
+}
+.pingpong-animate {
+  animation: pingpong .5s infinite;
+}
+
+@keyframes pingpong {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sponsor-form {
+  margin-top: 10px;
+  transition: height .5s;
+  height: 264px;
+  overflow: hidden;
+}
+.sponsor-form-close {
+  height: 0;
+}
+
+#sponsorAmount {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+#sponsorAmount::-webkit-outer-spin-button,
+#sponsorAmount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#sponsorAmount::placeholder {
+  font-size: .85em;
+}
+
+
+.sp-row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.sp-col {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 6px;
+  float: left;
+}
+.sp-item {
+  color: rgb(97, 97, 97);
+  border: 2px solid rgb(219, 176, 67);
+  border-radius: 6px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.sp-item:not(.sp-enter-amount):hover {
+  background-color: #ffeb3b;
+}
+.sponsor-pay {
+  width: 110px;
+  height: 42px;
+  margin: 0 auto;
+}
+.sponsor-pay button {
+  width: 110px;
+  background-color: #ff5722;
+  color: white;
+  font-size: 20px;
+  line-height: 42px;
+  text-align: center;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+.sp-item-highlight {
+  background-color: #ffeb3b;
+}
